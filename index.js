@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
-// Start the server and listen for incoming requests
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+// Start the server and listen for incoming requests on all network interfaces
+app.listen(PORT, '0.0.0.0', () => { // Add '0.0.0.0' here
+  console.log(`Server running at http://0.0.0.0:${PORT}/`); // Optional: update log message
 });
